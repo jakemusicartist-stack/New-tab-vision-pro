@@ -1,0 +1,32 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 3,
+  "name": "Tab Vision Pro",
+  "version": "1.2.1",
+  "description": "Customize your New Tab in the sleek, glassy Vision OS style.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Tab Vision Pro Options"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "history", 
+    "bookmarks", 
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  }
+}
